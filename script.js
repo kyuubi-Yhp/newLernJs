@@ -1,20 +1,15 @@
-const title = 1
-const csreen = 1
-const scrinPrise = 1
-const rollback = 1
-const fullPrise = 1
-const adaptive = 1
+const title = 'lesson02'
+const csreen = 'простые, сложные, интерактивные'
+const scrinPrise = 22
+const rollback = 10
+const fullPrise = 155_500
+const adaptive = true
 
-console.log(121123)
-
-let namePrompt = prompt('Введите ваше имя');
-
-while (
-  namePrompt === null ||             // Нажали "Отмена"
-  namePrompt.trim() === '' ||        // Пусто или пробелы
-  /\d/.test(namePrompt)              // Есть цифры
-) {
-  alert('Имя не может быть пустым, состоять из пробелов или содержать цифры.');
-  namePrompt = prompt('Введите ваше имя');
-}
-alert(`Отлично, ${namePrompt}!`);
+console.log(typeof(title))
+console.log(typeof(fullPrise))
+console.log(typeof(adaptive))
+console.log(csreen.length)
+console.log(scrinPrise + ' ' + 'руб')
+console.log(fullPrise + ' ' + 'руб')
+console.log(csreen.split(', '))
+console.log(fullPrise * (rollback / 100))
