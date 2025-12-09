@@ -5,11 +5,37 @@ const rollback = 10
 const fullPrise = 155_500
 const adaptive = true
 
-console.log(typeof(title))
-console.log(typeof(fullPrise))
-console.log(typeof(adaptive))
+console.log(typeof (title))
+console.log(typeof (fullPrise))
+console.log(typeof (adaptive))
 console.log(csreen.length)
 console.log(scrinPrise + ' ' + 'руб')
 console.log(fullPrise + ' ' + 'руб')
 console.log(csreen.split(', '))
 console.log(fullPrise * (rollback / 100))
+
+
+let num = 266219
+let value = 123
+
+let newValue = String(value)
+console.log(newValue)
+
+let arrayNumStr = newValue.split('')
+let arrayNumNum = arrayNumStr.map(index => {
+  return Number(index)
+})
+
+while (arrayNumNum.length) {
+  let current = arrayNumNum.shift();
+  let sum = current * num
+  let sumStepen = sum ** 3
+  let str = String(sumStepen).slice(0,2);
+  console.log(sum)
+  console.log(sumStepen)
+  console.log(str);
+}
+
+
+
+
