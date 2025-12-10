@@ -39,3 +39,26 @@ while (arrayNumNum.length) {
 
 
 
+console.log('----------------------------------')
+
+const numm = 266219
+
+const ar = 123
+
+let srString = String(ar).split('')
+let srNumm = srString.map(index => {
+  return Number(index)
+})
+
+
+for (i = 0; i < srNumm.length; i++) {
+  let current = srNumm[i]
+  let summ = numm * current
+  let summStep = summ ** 3
+  let summStepTwoNum = summStep.toString().slice(0,2)
+
+  console.log(summ)
+  console.log(summStep)
+  console.log(summStepTwoNum)
+}
+
