@@ -1,13 +1,14 @@
-const title = 'lesson02'
-const csreen = 'простые, сложные, интерактивные'
-const scrinPrise = 22
+const title = prompt('как называется ваш проект', 'title')
+const csreen = prompt('какие типы экранов нужны', 'простые, сложные, интерактивные')
+const scrinPrise = Number(prompt('сколько стоит данная работа', '12000'))
+const adaptive = confirm('нужен ли адаптив на сайте')
 const rollback = 10
-const fullPrise = 155_500
-const adaptive = true
+let fullPrise = 155_500
 
-console.log(typeof (title))
-console.log(typeof (fullPrise))
-console.log(typeof (adaptive))
+
+console.log(title)
+console.log(fullPrise)
+console.log(adaptive)
 console.log(csreen.length)
 console.log(scrinPrise + ' ' + 'руб')
 console.log(fullPrise + ' ' + 'руб')
@@ -30,35 +31,41 @@ while (arrayNumNum.length) {
   let current = arrayNumNum.shift();
   let sum = current * num
   let sumStepen = sum ** 3
-  let str = String(sumStepen).slice(0,2);
+  let str = String(sumStepen).slice(0, 2);
   console.log(sum)
   console.log(sumStepen)
   console.log(str);
 }
 
 
+const service1 = prompt('какой тип доп услуги нужен', 'очистка базы данных')
+const servicePrice1 = confirm(`стоить услуга: ${service1} , будет 2000`)
+const service2 = prompt('какой тип доп услуги нужен', 'рефакторинг')
+const servicePrice2 = confirm(`стоить услуга: ${service2} , будет 4000`)
 
 
-console.log('----------------------------------')
+let priceServi1 = servicePrice1 ? 2000 : 0
+let priceServi2 = servicePrice2 ? 4000 : 0
 
-const numm = 266219
+console.log(priceServi1)
+console.log(priceServi2)
 
-const ar = 123
+fullPrise = priceServi1 + priceServi2 + fullPrise * rollback / 100
+console.log(fullPrise)
 
-let srString = String(ar).split('')
-let srNumm = srString.map(index => {
-  return Number(index)
-})
+fullPrise = 15000
 
-
-for (i = 0; i < srNumm.length; i++) {
-  let current = srNumm[i]
-  let summ = numm * current
-  let summStep = summ ** 3
-  let summStepTwoNum = summStep.toString().slice(0,2)
-
-  console.log(summ)
-  console.log(summStep)
-  console.log(summStepTwoNum)
+if (fullPrise >= 30000) {
+  fullPrise = fullPrise - fullPrise * 0.10
+  console.log(fullPrise)
+  console.log('скидка 10%')
+} else if (fullPrise <= 30000 && fullPrise >= 15000) {
+  fullPrise = fullPrise - fullPrise * 0.05
+  console.log(fullPrise)
+  console.log('скидка 5%')
+} else if (fullPrise < 15000) {
+  console.log(fullPrise)
+  console.log('скидки нет')
+} else {
+  console.log('вышла ошибка')
 }
-
